@@ -2257,12 +2257,28 @@
     yup "0.32.9"
     zod "3.25.67"
 
+"@strapi/provider-email-nodemailer@^5.23.4":
+  version "5.23.4"
+  resolved "https://registry.yarnpkg.com/@strapi/provider-email-nodemailer/-/provider-email-nodemailer-5.23.4.tgz#bcd058441894d2b64ae0781a2da2cdcb52ee5ee8"
+  integrity sha512-fRiSrfPbSBaQMxBDIPUYVjmswbr7pY2zK0tMh3UpW2PCno266yHIfkOddClnk/7HI1chAOWt1fiXuVEGh4UX1g==
+  dependencies:
+    lodash "4.17.21"
+    nodemailer "6.10.1"
+
 "@strapi/provider-email-sendmail@5.23.3":
   version "5.23.3"
   resolved "https://registry.yarnpkg.com/@strapi/provider-email-sendmail/-/provider-email-sendmail-5.23.3.tgz#c96c4f0d0b6d88c289e2ae946265719f9ed14b13"
   integrity sha512-YAktycTR3f2lop4frFcXHlPan5WWSDW/okBXYMZEy+ZvIH/oQwmXqeJxx5KJKPCs+P4//lzfg19DMSN7xY0SyA==
   dependencies:
     "@strapi/utils" "5.23.3"
+    sendmail "^1.6.1"
+
+"@strapi/provider-email-sendmail@^5.23.4":
+  version "5.23.4"
+  resolved "https://registry.yarnpkg.com/@strapi/provider-email-sendmail/-/provider-email-sendmail-5.23.4.tgz#5bc972901e93fb6324bd11fc2daaa3670eb210fa"
+  integrity sha512-5Dfwo/h+07I6WFo42pKXA70iAJSjeayEfaqgy4XY5PtdHNQrWApmgs6KB+m42FFuopb1a+k75z4C6af7G/JXoQ==
+  dependencies:
+    "@strapi/utils" "5.23.4"
     sendmail "^1.6.1"
 
 "@strapi/provider-upload-local@5.23.3":
@@ -2456,6 +2472,22 @@
   version "5.23.3"
   resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-5.23.3.tgz#05e112bf632a739dfb2c99e0860fbbce241deca8"
   integrity sha512-4JW9DT1aTRPUvMivmkXfmk7iaDPySyrbJRXXOoAz2FAZKt0BKxwfsAaRUogzxgEjDkNg3WvNpiCU335tdgwy2w==
+  dependencies:
+    "@sindresorhus/slugify" "1.1.0"
+    date-fns "2.30.0"
+    execa "5.1.1"
+    http-errors "2.0.0"
+    lodash "4.17.21"
+    node-machine-id "1.1.12"
+    p-map "4.0.0"
+    preferred-pm "3.1.2"
+    yup "0.32.9"
+    zod "3.25.67"
+
+"@strapi/utils@5.23.4":
+  version "5.23.4"
+  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-5.23.4.tgz#185a00812a08ab6f2b558ad52366f5e0fa56e7f1"
+  integrity sha512-t60+0E5lSxZQBDhLIM2g8mQv7lQj8DiAKsfX+VX05Q0kFSItKsvzYuxL+h7yqvh6PImm8NgvIME4FU1NiT9dKg==
   dependencies:
     "@sindresorhus/slugify" "1.1.0"
     date-fns "2.30.0"
@@ -7085,6 +7117,11 @@ nodemailer-shared@1.1.0:
   integrity sha512-68xW5LSyPWv8R0GLm6veAvm7E+XFXkVgvE3FW0FGxNMMZqMkPFeGDVALfR1DPdSfcoO36PnW7q5AAOgFImEZGg==
   dependencies:
     nodemailer-fetch "1.6.0"
+
+nodemailer@6.10.1:
+  version "6.10.1"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.10.1.tgz#cbc434c54238f83a51c07eabd04e2b3e832da623"
+  integrity sha512-Z+iLaBGVaSjbIzQ4pX6XV41HrooLsQ10ZWPUehGmuantvzWoDVBnmsdUcOIDM1t+yPor5pDhVlDESgOMEGxhHA==
 
 nodemon@3.0.2:
   version "3.0.2"

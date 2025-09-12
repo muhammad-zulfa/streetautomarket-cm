@@ -95,6 +95,12 @@
       "default": 0,
       "min": 0,
       "max": 100
+    },
+    "transaction": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::transaction.transaction",
+      "inversedBy": "products"
     }
   }
 }

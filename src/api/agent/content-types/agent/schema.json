@@ -17,7 +17,8 @@
     },
     "phone": {
       "type": "string",
-      "maxLength": 13
+      "maxLength": 13,
+      "required": true
     },
     "address": {
       "type": "string",
@@ -35,6 +36,13 @@
       "relation": "oneToOne",
       "target": "api::city.city",
       "inversedBy": "agent"
+    },
+    "storeName": {
+      "type": "string"
+    },
+    "secondaryPhone": {
+      "type": "string",
+      "maxLength": 16
     }
   }
 }

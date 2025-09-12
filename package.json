@@ -18,6 +18,8 @@
   "dependencies": {
     "@strapi/plugin-cloud": "5.23.3",
     "@strapi/plugin-users-permissions": "5.23.3",
+    "@strapi/provider-email-nodemailer": "^5.23.4",
+    "@strapi/provider-email-sendmail": "^5.23.4",
     "@strapi/strapi": "5.23.3",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",

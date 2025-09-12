@@ -15,22 +15,26 @@
     "title": {
       "type": "string"
     },
-    "blocks": {
-      "type": "dynamiczone",
-      "components": [
-        "shared.media",
-        "shared.quote",
-        "shared.rich-text",
-        "shared.slider"
-      ]
+    "email": {
+      "type": "string"
     },
     "phone": {
       "type": "string",
       "maxLength": 15
     },
+    "dealershipPhone": {
+      "type": "string",
+      "maxLength": 16
+    },
     "description": {
       "type": "string",
       "maxLength": 200
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text"
+      ]
     }
   }
 }
