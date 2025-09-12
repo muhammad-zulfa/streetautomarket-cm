@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agents",
+  "info": {
+    "singularName": "agent",
+    "pluralName": "agents",
+    "displayName": "Agent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "phone": {
+      "type": "string",
+      "maxLength": 13
+    },
+    "address": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "location": {
+      "type": "customField",
+      "customField": "plugin::strapi-location-picker.location-picker",
+      "options": {
+        "info": true
+      }
+    },
+    "city": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::city.city",
+      "inversedBy": "agent"
+    }
+  }
+}
