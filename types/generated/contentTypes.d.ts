@@ -385,6 +385,10 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    address: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
     blocks: Schema.Attribute.DynamicZone<['shared.rich-text']>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -401,6 +405,13 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
       Schema.Attribute.Private;
+    location: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::strapi-location-picker.location-picker',
+        {
+          info: true;
+        }
+      >;
     phone: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 15;

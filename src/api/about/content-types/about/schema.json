@@ -35,6 +35,17 @@
       "components": [
         "shared.rich-text"
       ]
+    },
+    "address": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "location": {
+      "type": "customField",
+      "customField": "plugin::strapi-location-picker.location-picker",
+      "options": {
+        "info": true
+      }
     }
   }
 }
