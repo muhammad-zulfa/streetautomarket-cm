@@ -26,8 +26,7 @@ export default {
       .plugin("email")
       .service("email")
       .send({
-        // to: user.email,
-        to: "12muhammadzulfa@gmail.com", // or result.email if you want to welcome the user
+        to: user.email, // or result.email if you want to welcome the user
         from: strapi.config.get("plugin.email.settings.defaultFrom"),
         subject: "Your Account Has Been Created",
         html,
