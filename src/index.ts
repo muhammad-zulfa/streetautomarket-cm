@@ -27,7 +27,7 @@ export default {
         });
 
         // Build reset link
-        const resetUrl = `http://localhost:1337/reset-password?code=${resetToken}`;
+        const resetUrl = `https://street-auto.com/reset-password.html?code=${resetToken}`;
 
         // Send welcome + reset email
         await strapi
