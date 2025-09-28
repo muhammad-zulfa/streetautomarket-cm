@@ -15,10 +15,6 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text",
-      "maxLength": 80
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"
@@ -32,6 +28,13 @@
         "files",
         "videos"
       ]
+    },
+    "shortDescription": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "description": {
+      "type": "blocks"
     },
     "author": {
       "type": "relation",
@@ -51,21 +54,11 @@
       "target": "api::product.product",
       "mappedBy": "articles"
     },
-    "blocks": {
-      "type": "dynamiczone",
-      "components": [
-        "shared.rich-text"
-      ]
-    },
     "banner": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::banner.banner",
       "inversedBy": "article"
-    },
-    "shortDescription": {
-      "type": "string",
-      "maxLength": 255
     }
   }
 }
