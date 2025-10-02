@@ -3,6 +3,16 @@ export default ({ env }) => ({
   //   enabled: true,
   //   resolve: "./src/plugins/strapi-location-picker", // Or the correct path to your plugin
   // },
+  upload: {
+    config: {
+      provider: "local", // or S3, etc.
+      providerOptions: {
+        // …your storage options here
+      },
+      sizeLimit: 1 * 1024 * 1024, // 5 MB max per file
+      allowedFileTypes: ["images/*", "video/mp4"],
+    },
+  },
   email: {
     config: {
       provider: "nodemailer", // or 'sendgrid', 'mailgun', etc.
