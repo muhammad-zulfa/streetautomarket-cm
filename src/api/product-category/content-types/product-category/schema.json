@@ -18,11 +18,11 @@
       "type": "string",
       "maxLength": 150
     },
-    "product": {
+    "products": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::product.product",
-      "inversedBy": "product_category"
+      "mappedBy": "product_category"
     },
     "icon": {
       "type": "media",

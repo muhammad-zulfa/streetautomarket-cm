@@ -40,12 +40,7 @@
         }
       },
       "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "stocks": {
       "type": "decimal",
@@ -66,9 +61,10 @@
     },
     "product_category": {
       "type": "relation",
-      "relation": "oneToOne",
+      "required": true,
+      "relation": "manyToOne",
       "target": "api::product-category.product-category",
-      "mappedBy": "product"
+      "inversedBy": "products"
     },
     "articles": {
       "type": "relation",
