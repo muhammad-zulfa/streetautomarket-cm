@@ -20,6 +20,7 @@ services:
     volumes:
       - .:/app # for development hot-reload
       - /app/node_modules
+      - ./public/uploads:/app/public/uploads
     command: yarn dev
     depends_on:
       - postgres
