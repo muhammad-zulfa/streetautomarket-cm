@@ -40,7 +40,12 @@
         }
       },
       "multiple": true,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "stocks": {
       "type": "decimal",
@@ -61,7 +66,6 @@
     },
     "product_category": {
       "type": "relation",
-      "required": true,
       "relation": "manyToOne",
       "target": "api::product-category.product-category",
       "inversedBy": "products"
@@ -97,6 +101,15 @@
       "relation": "manyToOne",
       "target": "api::transaction.transaction",
       "inversedBy": "products"
+    },
+    "is_agent_product": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": true
     }
   }
 }

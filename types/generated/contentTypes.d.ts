@@ -782,6 +782,13 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    is_agent_product: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<true>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -803,8 +810,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     product_category: Schema.Attribute.Relation<
       'manyToOne',
       'api::product-category.product-category'
-    > &
-      Schema.Attribute.Required;
+    >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'> &
       Schema.Attribute.SetPluginOptions<{
