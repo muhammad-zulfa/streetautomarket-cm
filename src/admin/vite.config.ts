@@ -9,7 +9,7 @@ export default (config: UserConfig) => {
       },
     },
     server: {
-      allowedHosts: ["street-auto.com"],
+      allowedHosts: ["admin.street-auto.com"],
     },
   });
 };

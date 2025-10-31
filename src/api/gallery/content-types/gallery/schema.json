@@ -15,13 +15,45 @@
       "type": "string",
       "required": false
     },
+    "kind": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "video",
+        "image"
+      ]
+    },
     "image": {
       "type": "media",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "kind"
+            },
+            "image"
+          ]
+        }
+      },
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images"
       ]
+    },
+    "video_link": {
+      "type": "string",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "kind"
+            },
+            "video"
+          ]
+        }
+      },
+      "maxLength": 500
     }
   }
 }

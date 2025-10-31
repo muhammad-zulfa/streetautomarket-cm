@@ -5,5 +5,5 @@ export default ({ env }) => ({
   app: {
     keys: env.array("APP_KEYS"),
   },
-  allowedHosts: env.array("ALLOWED_HOSTS", ["street-auto.com"]),
+  allowedHosts: env.array("ALLOWED_HOSTS", ["admin.street-auto.com"]),
 });
