@@ -56,6 +56,13 @@
     "vehicleYear": {
       "type": "string",
       "maxLength": 4
+    },
+    "vehiclePlateNumber": {
+      "type": "string",
+      "required": true
+    },
+    "claimedAt": {
+      "type": "datetime"
     }
   }
 }

@@ -852,6 +852,7 @@ export interface ApiTransactionTransaction extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    claimedAt: Schema.Attribute.DateTime;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -882,6 +883,7 @@ export interface ApiTransactionTransaction extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 100;
       }>;
+    vehiclePlateNumber: Schema.Attribute.String & Schema.Attribute.Required;
     vehicleYear: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 4;
